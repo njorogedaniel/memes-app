@@ -4,7 +4,7 @@ import reactLogo from './assets/react.svg'
 import './style.css'
 import Header from './components/Header'
 import Content from './components/Content'
-
+import Reaction from './components/Reaction'
 function App() {
   
 
@@ -12,6 +12,7 @@ function App() {
     <div className='container'>
       <Header />
       <Content />
+      <Reaction liked={true} />
       
     </div>
   )

@@ -15,8 +15,8 @@ export default function Content() {
 
     const [memeImages, setMemeImage] = React.useState(
         {
-            topText:"Hello",
-            bottomText:"World",
+            topText:"",
+            bottomText:"",
             randomImageUrl:defaultImage
         }
     )
@@ -25,7 +25,7 @@ export default function Content() {
 // function that gets a random meme image 
 function getRandomImage() {
     setMemeImage(prevMemeImage => ({...prevMemeImage,randomImageUrl:memes[randomNumber].url}))
-    console.log(memeImages)
+    // console.log(memeImages)
 }
 
    
@@ -49,8 +49,7 @@ function getRandomImage() {
                 <img id="img"src={memeImages.randomImageUrl}alt="image comes here" />
                
             </div>  
-            <p>{memeImages.topText}</p>
-            <p>{memeImages.bottomText}</p>
+            
         </div>  
     )
 }
