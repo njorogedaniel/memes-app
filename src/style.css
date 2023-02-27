@@ -9,7 +9,7 @@ body{
     display: block;
     align-items: center;
     width: 550px;
-    height: 500px;
+    /* height: 500px; */
     margin-left: 10px;
     margin-top: 10px;
     background-color: aliceblue;
@@ -58,22 +58,20 @@ body{
 }
 
 /* Content styling */
-.input{
-    display: flex;
-    justify-content: center;
+form{
+    display: grid;
+    grid-template: 40px 40px / 1fr 1fr;
+    gap: 17px;
     margin-top: 8px;
-    padding: 10px;
-
 
 }
 
 /* input tag */
-input{
-    width: 50%;
-    margin: 5px;
-    padding: 10px;
-    border: 0.1em solid #D5D4D8;
+.input{
+    font-family: "Karla", sans-serif;
     border-radius: 5px;
+    border: 1px solid #D5D4D8;
+    text-indent: 5px;
 }
 
 /* Button styles */
@@ -86,13 +84,12 @@ input{
     /* margin-left: 10px; */
 }
 .button{
-    width: 100%;
-    padding: 10px;
-    color: wheat;
-    background-color: #672280;
-    margin-top: 10px;
-    border-radius: 10px;
-
+    grid-column: 1 / -1;
+    border-radius: 5px;
+    background: linear-gradient(90.41deg, #711F8D 1.14%, #A818DA 100%);
+    color: white;
+    border: none;
+    cursor: pointer;
 }
 
 .image-container{
@@ -104,6 +101,7 @@ input{
     border-radius: 8px;
     box-shadow: 1px 1px 10px #672280;
     margin-top: 10px;
+    position: relative;
     
 
 }
@@ -112,4 +110,40 @@ input{
     width: 100%;
     height: inherit;
 
+}
+.reaction{
+    background-color: #672280;
+}
+
+.meme-text{
+    position: absolute;
+    width: 80%;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 15px 0;
+    padding: 0 5px;
+    font-family: impact, sans-serif;
+    font-size: 2em;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 1px;
+    text-shadow:
+        2px 2px 0 #000,
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        0 2px 0 #000,
+        2px 0 0 #000,
+        0 -2px 0 #000,
+        -2px 0 0 #000,
+        2px 2px 5px #000;
+    
+}
+
+.top{
+    top:0;
+}
+.bottom{
+    bottom: 0;
 }
